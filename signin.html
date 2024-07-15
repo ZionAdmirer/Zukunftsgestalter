@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zukunftsgestalter - Anmelden</title>
+  <style>
+    /* Reset styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Base styles */
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      font-size: 16px;
+      background-color: #0f0f0f;
+      color: #ffffff;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #0f0f0f;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      border-bottom: 2px solid #00c2ff;
+    }
+
+    .logo {
+      font-size: 36px;
+      font-weight: bold;
+      color: #00c2ff;
+      animation: glowEffect 2s ease-in-out infinite;
+    }
+
+    /* Main content styles */
+    main {
+      padding: 100px 20px 40px;
+      border-left: 2px solid #00c2ff;
+      border-right: 2px solid #00c2ff;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 600px;
+      background-image: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+      position: relative;
+      overflow: hidden;
+      border-top: 2px solid #00c2ff;
+      border-bottom: 2px solid #00c2ff;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 40px;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+
+    .hero form {
+      background-color: #1a1a1a;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 194, 255, 0.2);
+      width: 400px;
+      animation: fadeIn 1.5s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero form label {
+      display: block;
+      margin-bottom: 10px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .hero form input[type="text"],
+    .hero form input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: none;
+      background-color: #0f0f0f;
+      color: #ffffff;
+    }
+
+    .hero form input[type="submit"] {
+      background-color: #00c2ff;
+      color: #0f0f0f;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 20px;
+      transition: background-color 0.3s ease;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .hero form input[type="submit"]:hover {
+      background-color: #0077b6;
+    }
+
+    .hero form p {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .hero form p a {
+      color: #00c2ff;
+      text-decoration: none;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('hero-image.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.2;
+      z-index: -1;
+      animation: bgScroll 60s linear infinite;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #0f0f0f;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      border-top: 2px solid #00c2ff;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes glowEffect {
+      0% {
+        text-shadow: 0 0 10px #00c2ff;
+      }
+      50% {
+        text-shadow: 0 0 20px #00c2ff;
+      }
+      100% {
+        text-shadow: 0 0 10px #00c2ff;
+      }
+    }
+
+    @keyframes bgScroll {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 0 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Zukunftsgestalter</div>
+  </header>
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-bg"></div>
+      <h1>Willkommen bei Zukunftsgestalter</h1>
+      <form>
+        <label for="username">Benutzername:</label>
+        <input type="text" id="username" name="username">
+        <label for="password">Passwort:</label>
+        <input type="password" id="password" name="password">
+        <input type="submit" value="Anmelden">
+        <p>Don't have an account? <a href="#">Sign up</a></p>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Zukunftsgestalter. Alle Rechte vorbehalten.</p>
+  </footer>
+</body>
+</html>

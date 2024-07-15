@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zukunftsgestalter</title>
+  <style>
+    /* Reset styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Base styles */
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      font-size: 16px;
+      background-color: #0f0f0f;
+      color: #ffffff;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #0f0f0f;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      border-bottom: 2px solid #00c2ff;
+    }
+
+    .logo {
+      font-size: 36px;
+      font-weight: bold;
+      color: #00c2ff;
+      margin-bottom: 20px;
+      animation: glowEffect 2s ease-in-out infinite;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 18px;
+      position: relative;
+      transition: color 0.3s ease;
+      padding: 10px 20px;
+      border: 2px solid transparent;
+      border-radius: 5px;
+    }
+
+    nav a:before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #00c2ff;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00c2ff;
+      border-color: #00c2ff;
+    }
+
+    nav a:hover:before {
+      width: 100%;
+    }
+
+    /* Main content styles */
+    main {
+      padding: 180px 20px 40px;
+      border-left: 2px solid #00c2ff;
+      border-right: 2px solid #00c2ff;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 600px;
+      background-image: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+      position: relative;
+      overflow: hidden;
+      border-top: 2px solid #00c2ff;
+      border-bottom: 2px solid #00c2ff;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 40px;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+
+    .hero p {
+      font-size: 24px;
+      margin-bottom: 40px;
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .hero a {
+      background-color: #00c2ff;
+      color: #0f0f0f;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 20px;
+      transition: background-color 0.3s ease;
+      animation: fadeIn 2s ease;
+      border: 2px solid #00c2ff;
+    }
+
+    .hero a:hover {
+      background-color: #0077b6;
+      border-color: #0077b6;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('hero-image.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.2;
+      z-index: -1;
+      animation: bgScroll 60s linear infinite;
+    }
+
+    .section {
+      margin-bottom: 60px;
+      animation: fadeIn 1s ease;
+    }
+
+    .section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #00c2ff;
+    }
+
+    .section p {
+      line-height: 1.5;
+      font-size: 18px;
+    }
+
+    .section-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .section-grid .card {
+      background-color: #1a1a1a;
+      padding: 30px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 194, 255, 0.2);
+      animation: scaleIn 0.5s ease;
+      border: 2px solid #00c2ff;
+      width: 300px;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .section-grid .card h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #00c2ff;
+    }
+
+    .section-grid .card p {
+      margin-bottom: 30px;
+    }
+
+    .section-grid .card a {
+      background-color: #00c2ff;
+      color: #0f0f0f;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 20px;
+      transition: background-color 0.3s ease;
+      border: 2px solid #00c2ff;
+    }
+
+    .section-grid .card a:hover {
+      background-color: #0077b6;
+      border-color: #0077b6;
+    }
+
+    .section-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 194, 255, 0.2);
+    }
+
+    .section-content h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #00c2ff;
+    }
+
+    .section-content p {
+      margin-bottom: 20px;
+    }
+
+    .section-content ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-bottom: 20px;
+    }
+
+    .section-content ul li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .section-content ul li:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #00c2ff;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #0f0f0f;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      border-top: 2px solid #00c2ff;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes scaleIn {
+      0% {
+        transform: scale(0.8);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes glowEffect {
+      0% {
+        text-shadow: 0 0 10px #00c2ff;
+      }
+      50% {
+        text-shadow: 0 0 20px #00c2ff;
+      }
+      100% {
+        text-shadow: 0 0 10px #00c2ff;
+      }
+    }
+
+    @keyframes bgScroll {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 0 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Zukunftsgestalter</div>
+    <nav>
+      <a href="signin.html">Anmelden</a>
+      <a href="whygermany.html">Warum Deutschland?</a>
+      <a href="discoverthefuture.html">Entdecken Sie die Zukunft</a>
+      <a href="innovatetechnologies.html">Innovative Technologien</a>
+      <a href="successfulcompanies.html">Erfolgreiche Unternehmen</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-bg"></div>
+      <h1>Willkommen bei Zukunftsgestalter</h1>
+      <p>Entdecken Sie die führende Rolle Deutschlands in Technologie und Innovation.</p>
+      <a href="#">Mehr erfahren</a>
+    </section>
+    <section class="section" id="why-germany">
+      <div class="section-content">
+        <h2>Warum Deutschland?</h2>
+        <p>Deutschland ist ein Innovationsmotor und Technologieführer in vielen Branchen. Das Land bietet Unternehmen und Fachkräften eine hervorragende Infrastruktur, hochqualifizierte Arbeitskräfte und ein förderliches Umfeld für Forschung und Entwicklung.</p>
+        <ul>
+          <li>Starke Industrie- und Technologiebasis</li>
+          <li>Exzellente Forschungslandschaft und Universitäten</li>
+          <li>Umfangreiche staatliche Förderprogramme</li>
+          <li>Hohe Lebensqualität und Attraktivität für Talente</li>
+        </ul>
+        <p>Profitieren Sie von den Vorteilen, die Deutschland als Standort für Ihr Unternehmen oder Ihre Karriere bietet.</p>
+      </div>
+    </section>
+    <section class="section" id="discover-future">
+      <div class="section-content">
+        <h2>Entdecken Sie die Zukunft</h2>
+        <p>Deutschland ist ein Hotspot für innovative Startups und Technologieunternehmen. Lassen Sie sich von den neuesten Entwicklungen in der deutschen Startup-Szene inspirieren und erfahren Sie mehr über die vielfältigen Förderprogramme und Inkubatoren, die Unternehmer unterstützen.</p>
+        <ul>
+          <li>Dynamische Startup-Ökosysteme in Städten wie Berlin, München und Hamburg</li>
+          <li>Staatliche Förderprogramme wie EXIST und High-Tech Gründerfonds</li>
+          <li>Renommierte Inkubatoren und Acceleratoren wie German Accelerator und Startupbootcamp</li>
+          <li>Erfolgreiche Startup-Geschichten aus Deutschland</li>
+        </ul>
+        <p>Entdecken Sie das Potenzial der deutschen Innovationslandschaft und lassen Sie sich von den Möglichkeiten inspirieren.</p>
+      </div>
+    </section>
+    <section class="section" id="innovative-tech">
+      <div class="section-content">
+        <h2>Innovative Technologien</h2>
+        <p>Deutschland ist führend in Schlüsseltechnologien wie autonomes Fahren, erneuerbare Energien und Industrie 4.0. Erfahren Sie mehr über die Vorreiterrolle deutscher Unternehmen in diesen Bereichen.</p>
+        <div class="section-grid">
+          <div class="card">
+            <h3>Autonomes Fahren</h3>
+            <p>Deutsche Unternehmen wie Bosch und Daimler sind Vorreiter in der Entwicklung von selbstfahrenden Autos. Sie treiben die Technologie für mehr Sicherheit und Effizienz im Straßenverkehr voran.</p>
+            <a href="#">Mehr erfahren</a>
+          </div>
+          <div class="card">
+            <h3>Erneuerbare Energien</h3>
+            <p>Siemens, E.ON und andere deutsche Firmen leisten einen wichtigen Beitrag zum Ausbau von Windkraft, Solarenergie und Energiespeicherung. Sie gestalten den Übergang zu einer nachhaltigen Energieversorgung mit.</p>
+            <a href="#">Mehr erfahren</a>
+          </div>
+          <div class="card">
+            <h3>Industrie 4.0</h3>
+            <p>Bosch, Siemens und andere deutsche Unternehmen sind führend in der Digitalisierung der Fertigung. Sie entwickeln innovative Lösungen für eine intelligente und vernetzte Produktion.</p>
+            <a href="#">Mehr erfahren</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="successful-companies">
+      <div class="section-content">
+        <h2>Erfolgreiche Unternehmen</h2>
+        <p>Deutschland ist Heimat vieler global agierender Unternehmen, die in ihren Branchen Maßstäbe setzen. Erfahren Sie mehr über einige der bekanntesten deutschen Konzerne und ihre Innovationen.</p>
+        <div class="section-grid">
+          <div class="card">
+            <h3>Volkswagen</h3>
+            <p>Der Automobilhersteller ist ein Vorreiter in der Elektromobilität und setzt auf innovative Technologien wie autonomes Fahren und Digitalisierung.</p>
+            <a href="#">Mehr erfahren</a>
+          </div>
+          <div class="card">
+            <h3>Siemens</h3>
+            <p>Der Technologiekonzern ist in Bereichen wie Industrie, Energie und Infrastruktur führend. Siemens treibt die Digitalisierung und Automatisierung in der Fertigung voran.</p>
+            <a href="#">Mehr erfahren</a>
+          </div>
+          <div class="card">
+            <h3>SAP</h3>
+            <p>Der Softwareriese ist weltweit führend in Unternehmenssoftware und -lösungen. SAP unterstützt Kunden bei der Digitalen Transformation und Optimierung von Geschäftsprozessen.</p>
+            <a href="#">Mehr erfahren</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Zukunftsgestalter. Alle Rechte vorbehalten.</p>
+  </footer>
+</body>
+</html>

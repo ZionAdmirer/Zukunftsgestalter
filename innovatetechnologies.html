@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zukunftsgestalter - Innovative Technologien</title>
+  <style>
+    /* Reset styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Base styles */
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      font-size: 16px;
+      background-color: #0f0f0f;
+      color: #ffffff;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #0f0f0f;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      border-bottom: 2px solid #00c2ff;
+    }
+
+    .logo {
+      font-size: 36px;
+      font-weight: bold;
+      color: #00c2ff;
+      animation: glowEffect 2s ease-in-out infinite;
+    }
+
+    /* Main content styles */
+    main {
+      padding: 100px 20px 40px;
+      border-left: 2px solid #00c2ff;
+      border-right: 2px solid #00c2ff;
+    }
+
+    .section {
+      margin-bottom: 60px;
+      animation: fadeIn 1s ease;
+    }
+
+    .section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #00c2ff;
+    }
+
+    .section p {
+      line-height: 1.5;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 40px;
+    }
+
+    .section-grid .card {
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 194, 255, 0.2);
+    }
+
+    .section-grid .card h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #00c2ff;
+    }
+
+    .section-grid .card p {
+      line-height: 1.5;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .section-grid .card a {
+      background-color: #00c2ff;
+      color: #0f0f0f;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 20px;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    .section-grid .card a:hover {
+      background-color: #0077b6;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #0f0f0f;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      border-top: 2px solid #00c2ff;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes glowEffect {
+      0% {
+        text-shadow: 0 0 10px #00c2ff;
+      }
+      50% {
+        text-shadow: 0 0 20px #00c2ff;
+      }
+      100% {
+        text-shadow: 0 0 10px #00c2ff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Zukunftsgestalter</div>
+  </header>
+  <main>
+    <section class="section">
+      <h2>Innovative Technologien</h2>
+      <p>Deutschland ist führend in Schlüsseltechnologien wie autonomes Fahren, erneuerbare Energien und Industrie 4.0. Erfahren Sie mehr über die Vorreiterrolle deutscher Unternehmen in diesen Bereichen.</p>
+    </section>
+
+    <section class="section">
+      <h2>Autonomes Fahren</h2>
+      <p>Deutsche Unternehmen wie Bosch, Daimler und Continental sind Vorreiter in der Entwicklung von selbstfahrenden Autos. Sie treiben die Technologie für mehr Sicherheit und Effizienz im Straßenverkehr voran.</p>
+      <div class="section-grid">
+        <div class="card">
+          <h3>Bosch</h3>
+          <p>Der Technologiekonzern Bosch entwickelt innovative Sensoren, Software und Steuerungssysteme für autonomes Fahren.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>Daimler</h3>
+          <p>Der Automobilhersteller Daimler setzt auf die Entwicklung von selbstfahrenden Fahrzeugen und Mobilitätslösungen der Zukunft.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>Continental</h3>
+          <p>Der Autozulieferer Continental ist ein wichtiger Akteur im Bereich des autonomen Fahrens und entwickelt fortschrittliche Fahrerassistenzsysteme.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Erneuerbare Energien</h2>
+      <p>Siemens, E.ON und andere deutsche Firmen leisten einen wichtigen Beitrag zum Ausbau von Windkraft, Solarenergie und Energiespeicherung. Sie gestalten den Übergang zu einer nachhaltigen Energieversorgung mit.</p>
+      <div class="section-grid">
+        <div class="card">
+          <h3>Siemens Gamesa</h3>
+          <p>Der Windkraftanlagenhersteller Siemens Gamesa ist ein Marktführer in der Entwicklung leistungsfähiger Windturbinen.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>E.ON</h3>
+          <p>Der Energiekonzern E.ON treibt den Ausbau erneuerbarer Energien und innovativer Energiespeicherlösungen voran.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>SMA Solar</h3>
+          <p>Der Hersteller von Wechselrichtern und Energiemanagementsystemen SMA Solar ist ein Pionier in der Solarenergie.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Industrie 4.0</h2>
+      <p>Bosch, Siemens und andere deutsche Unternehmen sind führend in der Digitalisierung der Fertigung. Sie entwickeln innovative Lösungen für eine intelligente und vernetzte Produktion.</p>
+      <div class="section-grid">
+        <div class="card">
+          <h3>Bosch</h3>
+          <p>Der Technologiekonzern Bosch ist ein Vorreiter in der Entwicklung von Industrie-4.0-Lösungen wie intelligente Fertigungsanlagen und Robotik.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>Siemens</h3>
+          <p>Siemens treibt die Digitalisierung der Fertigung mit seiner Automatisierungs- und Steuerungstechnik voran.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>KUKA</h3>
+          <p>Der Robotik-Spezialist KUKA entwickelt innovative Industrieroboter und Automatisierungslösungen für die Industrie 4.0.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Artificial Intelligence</h2>
+      <p>Deutsche Unternehmen wie SAP und Google sind führend in der Entwicklung von Künstlicher Intelligenz. Sie treiben die Technologie für mehr Effizienz und Innovation voran.</p>
+      <div class="section-grid">
+        <div class="card">
+          <h3>SAP</h3>
+          <p>Der Softwarekonzern SAP entwickelt innovative KI-Lösungen für die Digitalisierung von Geschäftsprozessen.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>Google</h3>
+          <p>Google treibt die Entwicklung von KI-Technologien voran und bietet innovative Lösungen für die digitale Transformation.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Biotechnology</h2>
+      <p>Deutsche Unternehmen wie BioNTech und CureVac sind führend in der Entwicklung von Impfstoffen und Therapien. Sie treiben die Technologie für mehr Gesundheit und Wohlbefinden voran.</p>
+      <div class="section-grid">
+        <div class="card">
+          <h3>BioNTech</h3>
+          <p>Der Biotechnologie-Konzern BioNTech entwickelt innovative Impfstoffe und Therapien gegen verschiedene Krankheiten.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>CureVac</h3>
+          <p>CureVac ist ein führender Hersteller von mRNA-basierten Impfstoffen und Therapien gegen verschiedene Krankheiten.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Space Technology</h2>
+      <p>Deutsche Unternehmen wie OHB und Kayser-Threde sind führend in der Entwicklung von Raumfahrttechnologien. Sie treiben die Technologie für mehr Erforschung und Exploration voran.</p>
+      <div class="section-grid">
+        <div class="card">
+          <h3>OHB</h3>
+          <p>Der Raumfahrtkonzern OHB entwickelt innovative Satelliten und Raumfahrzeugsysteme für die Erforschung und Exploration des Weltraums.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>Kayser-Threde</h3>
+          <p>Kayser-Threde ist ein führender Hersteller von Raumfahrttechnologien und entwickelt innovative Systeme für die Erforschung und Exploration des Weltraums.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Quantum Computing</h2>
+      <p>Deutsche Unternehmen wie IQM und Fraunhofer sind führend in der Entwicklung von Quantencomputern. Sie treiben die Technologie für mehr Rechenleistung und Innovation voran.</p>
+      <div class="section-grid">
+        <div class="card">
+          <h3>IQM</h3>
+          <p>IQM ist ein führender Anbieter von Quantencomputern und entwickelt innovative Lösungen für Forschung und Industrie.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>Fraunhofer</h3>
+          <p>Die Fraunhofer-Gesellschaft forscht an der Entwicklung von Quantencomputern und treibt die Technologie voran.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Blockchain Technology</h2>
+      <p>Deutsche Unternehmen wie Solarisbank und Fraunhofer sind führend in der Entwicklung von Blockchain-Technologien. Sie treiben die Technologie für mehr Sicherheit und Transparenz voran.</p>
+      <div class="section-grid">
+        <div class="card">
+          <h3>Solarisbank</h3>
+          <p>Solarisbank ist ein führender Anbieter von Blockchain-basierten Finanzdienstleistungen und entwickelt innovative Lösungen für den Finanzsektor.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>Fraunhofer</h3>
+          <p>Die Fraunhofer-Gesellschaft forscht an der Entwicklung von Blockchain-Technologien und treibt die Technologie in verschiedenen Anwendungsbereichen voran.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Zukunftsgestalter. Alle Rechte vorbehalten.</p>
+  </footer>
+</body>
+</html>

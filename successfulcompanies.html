@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zukunftsgestalter - Erfolgreiche Unternehmen</title>
+  <style>
+    /* Reset styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Base styles */
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      font-size: 16px;
+      background-color: #0f0f0f;
+      color: #ffffff;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #0f0f0f;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      border-bottom: 2px solid #00c2ff;
+    }
+
+    .logo {
+      font-size: 36px;
+      font-weight: bold;
+      color: #00c2ff;
+      animation: glowEffect 2s ease-in-out infinite;
+    }
+
+    /* Main content styles */
+    main {
+      padding: 100px 20px 40px;
+      border-left: 2px solid #00c2ff;
+      border-right: 2px solid #00c2ff;
+    }
+
+    .section {
+      margin-bottom: 60px;
+      animation: fadeIn 1s ease;
+    }
+
+    .section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #00c2ff;
+    }
+
+    .section p {
+      line-height: 1.5;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 40px;
+    }
+
+    .section-grid .card {
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 194, 255, 0.2);
+    }
+
+    .section-grid .card h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #00c2ff;
+    }
+
+    .section-grid .card p {
+      line-height: 1.5;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .section-grid .card a {
+      background-color: #00c2ff;
+      color: #0f0f0f;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 20px;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    .section-grid .card a:hover {
+      background-color: #0077b6;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #0f0f0f;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      border-top: 2px solid #00c2ff;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes glowEffect {
+      0% {
+        text-shadow: 0 0 10px #00c2ff;
+      }
+      50% {
+        text-shadow: 0 0 20px #00c2ff;
+      }
+      100% {
+        text-shadow: 0 0 10px #00c2ff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Zukunftsgestalter</div>
+  </header>
+  <main>
+    <section class="section">
+      <h2>Erfolgreiche Unternehmen</h2>
+      <p>Deutschland ist Heimat vieler global agierender Unternehmen, die in ihren Branchen Maßstäbe setzen. Erfahren Sie mehr über einige der bekanntesten deutschen Konzerne und ihre Innovationen.</p>
+    </section>
+
+    <section class="section">
+      <h2>Volkswagen</h2>
+      <p>Der Automobilhersteller Volkswagen ist ein Vorreiter in der Elektromobilität und setzt auf innovative Technologien wie autonomes Fahren und Digitalisierung.</p>
+      <div class="section-grid">
+        <div class="card">
+          <h3>ID.3 und ID.4</h3>
+          <p>Volkswagens Elektroauto-Modelle ID.3 und ID.4 sind erfolgreich auf dem Markt und treiben die Elektromobilität voran.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>Digitale Transformation</h3>
+          <p>Volkswagen investiert stark in die Digitalisierung seiner Prozesse und Produkte, um wettbewerbsfähig zu bleiben.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>Autonomes Fahren</h3>
+          <p>Volkswagen arbeitet an der Entwicklung von selbstfahrenden Autos und kooperiert mit Technologieunternehmen wie Argo AI.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Siemens</h2>
+      <p>Der Technologiekonzern Siemens ist in Bereichen wie Industrie, Energie und Infrastruktur führend. Siemens treibt die Digitalisierung und Automatisierung in der Fertigung voran.</p>
+      <div class="section-grid">
+        <div class="card">
+          <h3>Industrie 4.0</h3>
+          <p>Siemens entwickelt innovative Lösungen für die intelligente und vernetzte Produktion in der Industrie 4.0.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>Erneuerbare Energien</h3>
+          <p>Mit seiner Tochtergesellschaft Siemens Gamesa ist Siemens ein führender Anbieter von Windkraftanlagen.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>Digitale Infrastruktur</h3>
+          <p>Siemens liefert Lösungen für die digitale Infrastruktur, wie intelligente Stromnetze und Gebäudeautomation.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>SAP</h2>
+      <p>Der Softwareriese SAP ist weltweit führend in Unternehmenssoftware und -lösungen. SAP unterstützt Kunden bei der Digitalen Transformation und Optimierung von Geschäftsprozessen.</p>
+      <div class="section-grid">
+        <div class="card">
+          <h3>ERP-Systeme</h3>
+          <p>SAP ist Marktführer bei Enterprise Resource Planning (ERP)-Systemen und bietet integrierte Softwarelösungen für Unternehmen.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>Cloud-Lösungen</h3>
+          <p>Mit seiner Cloud-Plattform S/4HANA unterstützt SAP Unternehmen bei der Digitalisierung und Optimierung ihrer Prozesse.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>KI und Analytics</h3>
+          <p>SAP bietet innovative Lösungen für Künstliche Intelligenz und Datenanalyse, um Unternehmen Einblicke in ihre Geschäftsprozesse zu geben.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Adidas</h2>
+      <p>Der Sportartikelhersteller Adidas ist weltweit bekannt für seine innovativen Produkte und Marken. Adidas setzt auf Nachhaltigkeit und Digitalisierung.</p>
+      <div class="section-grid">
+        <div class="card">
+          <h3>Boost-Technologie</h3>
+          <p>Adidas' Boost-Technologie in Laufschuhen bietet hohen Komfort und Dämpfung für Sportler.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>Nachhaltigkeit</h3>
+          <p>Adidas setzt sich für Nachhaltigkeit ein und verwendet recycelte Materialien in seinen Produkten.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>Digitale Transformation</h3>
+          <p>Adidas investiert in die Digitalisierung seiner Lieferkette und Vertriebskanäle, um wettbewerbsfähig zu bleiben.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Bosch</h2>
+      <p>Der Technologiekonzern Bosch ist in vielen Bereichen führend, von Automobilzulieferung bis hin zu Industrietechnik und Haushaltsgeräten.</p>
+      <div class="section-grid">
+        <div class="card">
+          <h3>Autonomes Fahren</h3>
+          <p>Bosch entwickelt innovative Sensoren, Software und Steuerungssysteme für selbstfahrende Autos.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>Industrie 4.0</h3>
+          <p>Bosch bietet Lösungen für die intelligente und vernetzte Produktion in der Industrie 4.0.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>Haushaltsgeräte</h3>
+          <p>Mit Marken wie Bosch und Siemens ist Bosch ein führender Anbieter von Haushaltsgeräten.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>BASF</h2>
+      <p>Der Chemiekonzern BASF ist weltweit führend in der Entwicklung innovativer Materialien und Lösungen für verschiedene Branchen.</p>
+      <div class="section-grid">
+        <div class="card">
+          <h3>Nachhaltige Chemie</h3>
+          <p>BASF setzt sich für die Entwicklung umweltfreundlicher und nachhaltiger Chemieprodukte ein.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>Digitalisierung</h3>
+          <p>BASF investiert in die Digitalisierung seiner Prozesse und Produktentwicklung, um wettbewerbsfähig zu bleiben.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>Materialinnovationen</h3>
+          <p>BASF entwickelt innovative Materialien für Anwendungen in Bereichen wie Mobilität, Energie und Bauwesen.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Merck</h2>
+      <p>Der Pharma- und Chemiekonzern Merck ist ein Innovationsführer in den Bereichen Gesundheit, Elektronik und Spezialchemikalien.</p>
+      <div class="section-grid">
+        <div class="card">
+          <h3>Biopharmazeutika</h3>
+          <p>Merck entwickelt innovative Biopharmazeutika und Therapien für die Behandlung von Krankheiten.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>Elektronische Materialien</h3>
+          <p>Merck ist ein führender Anbieter von Materialien für die Halbleiter- und Displayindustrie.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+        <div class="card">
+          <h3>Spezialchemikalien</h3>
+          <p>Merck produziert hochwertige Spezialchemikalien für verschiedene Industriezweige.</p>
+          <a href="#">Mehr erfahren</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Zukunftsgestalter. Alle Rechte vorbehalten.</p>
+  </footer>
+</body>
+</html>
